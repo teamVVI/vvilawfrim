@@ -45,15 +45,21 @@
 </head>
 <body class="bg-light text-gray-800 antialiased">
 
-    <!-- Navigation Bar -->
+<!-- Navigation Bar -->
     <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <!-- Logo -->
+            <!-- 這裡把原本的 h-20 改成 h-24，讓導覽列變高一點 -->
+            <div class="flex justify-between h-24">
+                
+                <!-- Logo 區塊 -->
                 <div class="flex items-center">
-                    <a href="#" class="flex items-center gap-2">
-                        <i data-lucide="scale" class="text-accent w-8 h-8"></i>
-                        <span class="font-serif-tc font-bold text-2xl text-primary tracking-wider">德勝國際法律事務所</span>
+                    <a href="#" class="flex items-center gap-4">
+                        <!-- 圖片高度從 h-10 放大到 h-16 (約 64px 高) -->
+                        <img src="logo.png" alt="德勝國際法律事務所 Logo" class="h-16 w-auto object-contain">
+                        
+                        <!-- 文字大小從 text-2xl 放大到 text-3xl (手機版) / text-4xl (電腦版) -->
+                        <!-- 字體粗細從 font-bold 改為 font-black (最粗)，並增加 tracking-widest (拉開字距) -->
+                        <span class="font-serif-tc font-black text-3xl md:text-4xl text-primary tracking-widest drop-shadow-sm">德勝國際法律事務所</span>
                     </a>
                 </div>
                 
