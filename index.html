@@ -353,45 +353,50 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <div class="bg-white p-8 rounded-sm shadow-2xl">
-                    <h3 class="text-2xl font-serif-tc font-bold text-primary mb-6">線上預約諮詢</h3>
-                    <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('此為設計預覽，實際表單功能需於 Wix 內設定 Wix Forms。');">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名 / 公司名稱 *</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-sm focus:ring-accent focus:border-accent outline-none transition-colors">
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">聯絡電話 *</label>
-                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-sm focus:ring-accent focus:border-accent outline-none transition-colors">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">電子郵件</label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-sm focus:ring-accent focus:border-accent outline-none transition-colors">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="category" class="block text-sm font-medium text-gray-700 mb-1">案件類型</label>
-                            <select id="category" name="category" class="w-full px-4 py-2 border border-gray-300 rounded-sm focus:ring-accent focus:border-accent outline-none transition-colors bg-white">
-                                <option>請選擇...</option>
-                                <option>民事訴訟</option>
-                                <option>刑事辯護</option>
-                                <option>家事事件 (離婚/繼承)</option>
-                                <option>企業顧問 / 合約審閱</option>
-                                <option>其他</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">簡述您的問題 *</label>
-                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-sm focus:ring-accent focus:border-accent outline-none transition-colors resize-none"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-accent hover:bg-accentHover text-white font-bold py-3 px-4 rounded-sm transition-colors duration-300 mt-2">
-                            送出諮詢表單
-                        </button>
-                    </form>
-                </div>
-            </div>
+                <!-- 預約諮詢表單區塊 -->
+<div class="bg-white p-8 rounded-lg shadow-md mt-10">
+    <h3 class="text-2xl font-bold text-primary mb-6 font-serif-tc text-center">線上預約諮詢</h3>
+    
+    <!-- 將這裡的 action 網址替換成您的 Formspree 專屬網址 -->
+    <form action="https://formspree.io/f/xzeppedk" method="POST" class="space-y-6">
+        
+        <!-- 姓名 -->
+        <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">真實姓名</label>
+            <input type="text" name="name" id="name" required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent sm:text-sm p-3 border">
+        </div>
+
+        <!-- 聯絡電話 -->
+        <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700">聯絡電話</label>
+            <input type="tel" name="phone" id="phone" required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent sm:text-sm p-3 border">
+        </div>
+
+        <!-- Email -->
+        <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">電子信箱</label>
+            <input type="email" name="email" id="email" required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent sm:text-sm p-3 border">
+        </div>
+
+        <!-- 諮詢內容簡述 -->
+        <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">案件或諮詢內容簡述</label>
+            <textarea name="message" id="message" rows="4" required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent sm:text-sm p-3 border"></textarea>
+        </div>
+
+        <!-- 送出按鈕 -->
+        <div>
+            <button type="submit"
+                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900 transition-colors">
+                送出預約
+            </button>
+        </div>
+    </form>
+</div>
         </div>
     </section>
 
