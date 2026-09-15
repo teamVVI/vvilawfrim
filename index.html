@@ -329,39 +329,43 @@
                     </p>
                     
                     <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                                <i data-lucide="map-pin" class="text-accent w-6 h-6"></i>
+                        
+                        <!-- 1. 事務所地址 (連結至 Google Maps，另開新分頁) -->
+                        <a href="https://www.google.com/maps/search/?api=1&query=臺中市西區法院前街17號2樓" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 group cursor-pointer">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-accent transition-colors duration-300">
+                                <i data-lucide="map-pin" class="text-accent group-hover:text-white w-6 h-6 transition-colors duration-300"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1">事務所地址</h4>
-                                <p class="text-gray-400">臺中市西區法院前街17號2樓</p>
+                                <h4 class="font-bold text-lg mb-1 group-hover:text-accent transition-colors duration-300">事務所地址</h4>
+                                <p class="text-gray-400 group-hover:text-gray-200 transition-colors duration-300">臺中市西區法院前街17號2樓</p>
                                 <p class="text-sm text-gray-500 mt-1">（臺灣臺中地方法院對面）</p>
                             </div>
-                        </div>
+                        </a>
                         
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                                <i data-lucide="phone" class="text-accent w-6 h-6"></i>
+                        <!-- 2. 聯絡電話 (使用 tel: 讓手機可以直接撥打) -->
+                        <a href="tel:0422245686" class="flex items-start gap-4 group cursor-pointer">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-accent transition-colors duration-300">
+                                <i data-lucide="phone" class="text-accent group-hover:text-white w-6 h-6 transition-colors duration-300"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1">聯絡電話</h4>
-                                <p class="text-gray-400">(04) 2224-5686</p>
+                                <h4 class="font-bold text-lg mb-1 group-hover:text-accent transition-colors duration-300">聯絡電話</h4>
+                                <p class="text-gray-400 group-hover:text-gray-200 transition-colors duration-300">(04) 2224-5686</p>
                                 <p class="text-sm text-gray-500 mt-1">營業時間：週一至週五 09:00 - 17:30</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                                <i data-lucide="mail" class="text-accent w-6 h-6"></i>
+                        <!-- 3. 電子郵件 (使用 mailto: 開啟預設收信軟體) -->
+                        <a href="mailto:team@vvilawfirm.com" class="flex items-start gap-4 group cursor-pointer">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-accent transition-colors duration-300">
+                                <i data-lucide="mail" class="text-accent group-hover:text-white w-6 h-6 transition-colors duration-300"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1">電子郵件</h4>
-                                <p class="text-gray-400">team@vvilawfirm.com</p>
+                                <h4 class="font-bold text-lg mb-1 group-hover:text-accent transition-colors duration-300">電子郵件</h4>
+                                <p class="text-gray-400 group-hover:text-gray-200 transition-colors duration-300">team@vvilawfirm.com</p>
                             </div>
-                        </div>
+                        </a>
+                        
                     </div>
-                </div>
 
                <!-- 預約諮詢表單區塊 -->
 <div class="bg-white p-8 rounded-lg shadow-md mt-10">
