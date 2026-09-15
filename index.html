@@ -460,7 +460,13 @@
     </footer>
 
     <!-- Initialize Icons and Mobile Menu Script -->
+    <!-- 讓網頁重新整理時，強制回到最上方 -->
     <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    </script>
         // Initialize Lucide Icons
         lucide.createIcons();
 
