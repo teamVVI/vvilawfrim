@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專業服務 | 德勝國際法律事務所</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b',
+                        accent: '#d4af37',
+                        accentHover: '#b5952f',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'serif'],
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .font-serif-tc { font-family: 'Noto Serif TC', serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- 導覽列 (與首頁一致) -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-4">
+                        <img src="logo.png" alt="德勝國際法律事務所 Logo" class="h-16 w-auto object-contain">
+                        <span class="font-serif-tc font-black text-3xl md:text-4xl text-primary tracking-widest drop-shadow-sm">德勝國際法律事務所</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-accent font-medium transition-colors">首頁</a>
+                    <a href="services.html" class="text-accent font-medium border-b-2 border-accent pb-1">專業領域</a>
+                    <a href="index.html#contact" class="bg-primary hover:bg-gray-800 text-white px-6 py-2 rounded-sm font-medium transition-colors duration-300 shadow-md">
+                        線上預約諮詢
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容區塊 -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-20 w-full">
+        
+        <!-- ========================================== -->
+        <!-- 👇 請將 6 個分頁的「專屬內容」貼在下方替換 👇 -->
+        <!-- ========================================== -->
+
+       <div class="bg-white p-10 rounded-sm shadow-md border-t-4 border-accent relative overflow-hidden">
+    <!-- 右上角特殊標籤 -->
+    <div class="absolute top-0 right-0 bg-accent text-white px-6 py-2 rounded-bl-lg font-bold shadow-md">
+        律師 ✕ 地政士 雙專業
+    </div>
+    
+    <div class="w-16 h-16 bg-gray-50 flex items-center justify-center rounded-full mb-6 text-primary">
+        <i data-lucide="home" class="w-8 h-8"></i>
+    </div>
+    <h1 class="text-3xl font-serif-tc font-bold text-primary mb-6">不動產與工程案件</h1>
+    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+        不動產案件不僅涉及法律爭議，更與地政實務息息相關。
+    </p>
+    <h3 class="text-xl font-bold text-primary mb-4 border-l-4 border-accent pl-3">核心服務項目</h3>
+    <ul class="space-y-4 text-gray-600">
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-accent shrink-0"></i> <strong>產權與登記糾紛：</strong> 借名登記返還、抵押權塗銷、地上權與通行權爭議、地籍圖重測與界址糾紛。</li>
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-accent shrink-0"></i> <strong>共有物處理：</strong> 共有土地或房屋之協議分割、裁判分割訴訟、優先購買權爭議。</li>
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-accent shrink-0"></i> <strong>買賣與租賃爭議：</strong> 房屋漏水、海砂屋等買賣瑕疵擔保求償、租霸排除與房屋遷讓強制執行。</li>
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-accent shrink-0"></i> <strong>工程與都更：</strong> 營建工程款給付爭議、工程瑕疵鑑定、都市更新與危老重建合約審閱及爭議處理。</li>
+    </ul>
+</div>
+
+        <!-- ========================================== -->
+        <!-- 👆 專屬內容結束 👆 ========================== -->
+        <!-- ========================================== -->
+
+        <!-- 返回按鈕 -->
+        <div class="mt-12 text-center border-t border-gray-200 pt-8">
+            <a href="services.html" class="text-gray-500 hover:text-primary font-medium flex items-center justify-center gap-2 transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> 返回服務總覽
+            </a>
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2026 德勝國際法律事務所 版權所有.</p>
+        </div>
+    </footer>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
