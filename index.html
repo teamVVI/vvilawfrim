@@ -459,6 +459,11 @@
     </footer>
 
     <!-- Initialize Icons and Mobile Menu Script -->
+   <!-- 呼叫並顯示所有小圖示 (這行非常重要！) -->
+    <script>
+        lucide.createIcons();
+    </script>
+    
     <!-- 讓網頁重新整理時，強制回到最上方 -->
     <script>
         if ('scrollRestoration' in history) {
@@ -466,6 +471,8 @@
         }
         window.scrollTo(0, 0);
     </script>
+</body>
+</html>
         // Initialize Lucide Icons
         lucide.createIcons();
 
