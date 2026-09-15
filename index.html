@@ -275,6 +275,7 @@
 
     <!-- Team Section -->
     <!-- Team Section -->
+    <!-- Team Section -->
     <section id="team" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -284,37 +285,37 @@
                 <p class="mt-4 text-gray-600 max-w-2xl mx-auto">我們由經驗豐富的律師親自為您提供最精準的法律分析與訴訟策略。</p>
             </div>
 
-            <!-- 改為兩欄式排版 (md:grid-cols-2) 並置中 -->
+            <!-- 兩欄式排版 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                
                 <!-- 律師 1：黃柏憲律師 -->
-                <div class="group">
-                    <div class="relative overflow-hidden bg-gray-200 aspect-w-3 aspect-h-4 rounded-t-sm">
-                        <!-- 請替換為黃柏憲律師的實際照片網址或檔名 -->
-                        <img src="lawyer-huang.jpg" alt="黃柏憲 律師" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                <div class="group flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <!-- 關鍵修改：aspect-[3/4] 強制寬高比為 3:4 -->
+                    <div class="relative overflow-hidden bg-gray-200 aspect-[3/4] rounded-t-sm w-full">
+                        <!-- 關鍵修改：absolute inset-0 配合 object-cover 讓照片置中裁切不變形 -->
+                        <img src="lawyer-huang.jpg" alt="黃柏憲 律師" class="absolute inset-0 object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="bg-primary p-6 rounded-b-sm text-center">
+                    <!-- 加入 flex-grow 確保下方文字區塊自動填滿對齊 -->
+                    <div class="bg-primary p-6 rounded-b-sm text-center flex-grow flex flex-col justify-center">
                         <h3 class="text-xl font-serif-tc font-bold text-white mb-1">黃柏憲 主持律師</h3>
                         <p class="text-accent text-sm mb-4">企業法律顧問 / 民事訴訟 / 刑事訴訟 / 勞資爭議 / 土地案件</p>
-                        <div class="flex justify-center gap-4">
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="mail" class="w-5 h-5"></i></a>
-                        </div>
                     </div>
                 </div>
 
                 <!-- 律師 2：謝佳容律師 -->
-                <div class="group">
-                    <div class="relative overflow-hidden bg-gray-200 aspect-w-3 aspect-h-4 rounded-t-sm">
-                        <!-- 請替換為謝佳容律師的實際照片網址或檔名 -->
-                        <img src="lawyer-hsieh.jpg" alt="謝佳容 律師" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                <div class="group flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <!-- 關鍵修改：aspect-[3/4] 強制寬高比為 3:4 -->
+                    <div class="relative overflow-hidden bg-gray-200 aspect-[3/4] rounded-t-sm w-full">
+                        <!-- 關鍵修改：absolute inset-0 配合 object-cover 讓照片置中裁切不變形 -->
+                        <img src="lawyer-hsieh.jpg" alt="謝佳容 律師" class="absolute inset-0 object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="bg-primary p-6 rounded-b-sm text-center">
+                    <!-- 加入 flex-grow 確保下方文字區塊自動填滿對齊 -->
+                    <div class="bg-primary p-6 rounded-b-sm text-center flex-grow flex flex-col justify-center">
                         <h3 class="text-xl font-serif-tc font-bold text-white mb-1">謝佳容 主持律師</h3>
                         <p class="text-accent text-sm mb-4">企業法律顧問 / 民事訴訟 / 刑事訴訟 / 工程案件 / 家事案件</p>
-                        <div class="flex justify-center gap-4">
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="mail" class="w-5 h-5"></i></a>
-                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
