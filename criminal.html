@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專業服務 | 德勝國際法律事務所</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b',
+                        accent: '#d4af37',
+                        accentHover: '#b5952f',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'serif'],
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .font-serif-tc { font-family: 'Noto Serif TC', serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- 導覽列 (與首頁一致) -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-4">
+                        <img src="logo.png" alt="德勝國際法律事務所 Logo" class="h-16 w-auto object-contain">
+                        <span class="font-serif-tc font-black text-3xl md:text-4xl text-primary tracking-widest drop-shadow-sm">德勝國際法律事務所</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-accent font-medium transition-colors">首頁</a>
+                    <a href="services.html" class="text-accent font-medium border-b-2 border-accent pb-1">專業領域</a>
+                    <a href="index.html#contact" class="bg-primary hover:bg-gray-800 text-white px-6 py-2 rounded-sm font-medium transition-colors duration-300 shadow-md">
+                        線上預約諮詢
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容區塊 -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-20 w-full">
+        
+        <!-- ========================================== -->
+        <!-- 👇 請將 6 個分頁的「專屬內容」貼在下方替換 👇 -->
+        <!-- ========================================== -->
+
+     <div class="bg-white p-10 rounded-sm shadow-md border-t-4 border-accent">
+    <div class="w-16 h-16 bg-gray-50 flex items-center justify-center rounded-full mb-6 text-primary">
+        <i data-lucide="shield-alert" class="w-8 h-8"></i>
+    </div>
+    <h1 class="text-3xl font-serif-tc font-bold text-primary mb-6">刑事辯護與告訴</h1>
+    <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+        面對刑事偵查與審判程序，當事人常感到孤立無援。我們提供從警局偵訊到法院審理的全程陪伴，保障您的人權與程序正義，無論是作為被告辯護或告訴人代理，皆以最高標準為您捍衛權益。
+    </p>
+    <h3 class="text-xl font-bold text-primary mb-4 border-l-4 border-accent pl-3">核心服務項目</h3>
+    <ul class="space-y-4 text-gray-600">
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-accent shrink-0"></i> <strong>陪同偵訊與羈押庭：</strong> 警局、調查局陪同製作筆錄，及檢察署偵查庭、法院羈押庭之辯護。</li>
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-accent shrink-0"></i> <strong>財產與經濟犯罪：</strong> 詐欺（含車手、人頭帳戶案件）、背信、侵占、偽造文書等案件辯護與告訴。</li>
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-accent shrink-0"></i> <strong>暴力與交通犯罪：</strong> 傷害、妨害自由、肇事逃逸、公共危險（酒駕）等案件處理。</li>
+        <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-accent shrink-0"></i> <strong>刑事附帶民事訴訟：</strong> 協助被害人於刑事程序中同時向加害人請求損害賠償。</li>
+    </ul>
+</div>
+
+        <!-- ========================================== -->
+        <!-- 👆 專屬內容結束 👆 ========================== -->
+        <!-- ========================================== -->
+
+        <!-- 返回按鈕 -->
+        <div class="mt-12 text-center border-t border-gray-200 pt-8">
+            <a href="services.html" class="text-gray-500 hover:text-primary font-medium flex items-center justify-center gap-2 transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> 返回服務總覽
+            </a>
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2026 德勝國際法律事務所 版權所有.</p>
+        </div>
+    </footer>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
