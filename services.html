@@ -1,119 +1,165 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>專業服務領域 | 德勝國際法律事務所</title>
-    <!-- 引入 Tailwind CSS (確保與首頁設計風格一致) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: 引入最高字重 900 (Black) 確保標題氣勢 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- 套用與首頁完全相同的色彩配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b', // Deep Slate / Navy
+                        accent: '#d4af37', // Gold / Champagne
+                        accentHover: '#b5952f',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'serif'],
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* 替換為您喜歡的字體，這裡預設使用黑體/明體搭配 */
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; }
-        .font-serif-tc { font-family: 'Noto Serif TC', serif; }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, .font-serif-tc {
+            font-family: 'Noto Serif TC', serif;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+<body class="bg-light text-gray-800 antialiased flex flex-col min-h-screen">
 
-    <!-- 網站標頭與導覽列 -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo 與 所名 -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                        <!-- 如果您有圖片 Logo，可以把下方的 div 換成 <img src="您的logo網址" alt="Logo" class="h-12 w-auto"> -->
-                        <div class="h-10 w-10 bg-blue-900 text-white flex items-center justify-center text-xl font-bold rounded">德勝</div>
-                        <div>
-                            <h1 class="text-2xl font-bold text-blue-900 font-serif-tc tracking-wider">德勝國際法律事務所</h1>
-                            <p class="text-xs text-gray-500 tracking-widest mt-1">主持律師 施秉璋</p>
-                        </div>
+    <!-- Navigation Bar (與首頁加大版本完全一致) -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24">
+                
+                <!-- Logo 區塊 (加大版) -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-4">
+                        <img src="logo.png" alt="德勝國際法律事務所 Logo" class="h-16 w-auto object-contain">
+                        <span class="font-serif-tc font-black text-3xl md:text-4xl text-primary tracking-widest drop-shadow-sm">德勝國際法律事務所</span>
                     </a>
                 </div>
-                <!-- 桌面版導覽列 -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-blue-900 font-medium transition-colors">首頁</a>
-                    <a href="services.html" class="text-blue-900 font-bold border-b-2 border-blue-900 pb-1">專業服務</a>
-                </nav>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-accent font-medium transition-colors">首頁</a>
+                    <!-- 加上底線標示目前正在「專業領域」頁面 -->
+                    <a href="services.html" class="text-accent font-medium border-b-2 border-accent pb-1">專業領域</a>
+                    <!-- 點擊聯絡我們會自動跳回首頁的表單區塊 -->
+                    <a href="index.html#contact" class="text-gray-600 hover:text-accent font-medium transition-colors">聯絡我們</a>
+                    <a href="index.html#contact" class="bg-accent hover:bg-accentHover text-white px-6 py-2 rounded-sm font-medium transition-colors duration-300 shadow-lg">
+                        線上預約諮詢
+                    </a>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- 主要內容區塊 -->
-    <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+    <!-- 主要內容區塊 (因導覽列加高到 h-24，這裡增加 pt-32 確保不被擋住) -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 w-full">
         
         <!-- 頁面標題 -->
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 font-serif-tc mb-4">專業服務領域</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
-                我們結合法律與地政雙重專業，為您提供最全面、務實的解決方案。以下是我們的核心服務項目：
+            <p class="text-accent font-medium tracking-widest uppercase mb-2">Practice Areas</p>
+            <h2 class="text-3xl md:text-4xl font-serif-tc font-bold text-primary mb-4">專業服務領域</h2>
+            <div class="w-20 h-1 bg-accent mx-auto"></div>
+            <p class="mt-6 text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                我們由施秉璋律師親自主持，結合「律師」與「地政士」雙重國家考試合格專業，為您提供最全面、務實且精準的法律解決方案。
             </p>
         </div>
 
-        <!-- 服務項目列表 (網格設計) -->
+        <!-- 服務項目列表 (對齊首頁的卡片風格與滑鼠懸停特效) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             
             <!-- 服務項目 1 -->
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center mb-6 text-2xl">
-                    🏢
+            <div class="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center rounded-full mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300 text-primary">
+                    <i data-lucide="building" class="w-7 h-7"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">不動產與土地法規</h3>
-                <p class="text-gray-600 leading-relaxed mb-4">
-                    憑藉地政士與律師雙重資格，專精於土地糾紛、共有物分割、買賣瑕疵擔保、借名登記返還等複雜不動產案件。提供從地政登記到法庭訴訟的一站式專業服務。
+                <h3 class="text-xl font-serif-tc font-bold text-primary mb-3">不動產與土地法規</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    憑藉雙證照優勢，專精於土地糾紛、共有物分割、買賣瑕疵擔保、借名登記返還及都市更新爭議。我們提供從「地政登記」到「法庭訴訟」無縫接軌的一站式專業服務。
                 </p>
             </div>
 
             <!-- 服務項目 2 -->
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center mb-6 text-2xl">
-                    📜
+            <div class="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center rounded-full mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300 text-primary">
+                    <i data-lucide="file-heart" class="w-7 h-7"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">繼承與家事事件</h3>
-                <p class="text-gray-600 leading-relaxed mb-4">
-                    處理遺產分割、特留分扣減、遺囑撰寫與見證等繼承事務。我們以細膩的視角與堅實的法律背景，協助您妥善處理家族財產傳承與紛爭。
+                <h3 class="text-xl font-serif-tc font-bold text-primary mb-3">繼承與家事事件</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    處理複雜遺產分割、特留分扣減、遺囑撰寫與見證、以及離婚與剩餘財產分配等事務。以細膩的視角與堅實的法律背景，協助您妥善處理家族財產傳承與紛爭。
                 </p>
             </div>
 
             <!-- 服務項目 3 -->
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center mb-6 text-2xl">
-                    ⚖️
+            <div class="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center rounded-full mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300 text-primary">
+                    <i data-lucide="gavel" class="w-7 h-7"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">一般民商事訴訟</h3>
-                <p class="text-gray-600 leading-relaxed mb-4">
-                    涵蓋債務催收、車禍損害賠償、勞資爭議、消費者保護法及各類契約審閱與糾紛處理。為客戶評估訴訟風險，爭取最大合法權益。
+                <h3 class="text-xl font-serif-tc font-bold text-primary mb-3">一般民商事訴訟</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    涵蓋債務催收、車禍損害賠償、勞資爭議、消費者保護法及各類契約審閱與糾紛處理。為當事人精準評估訴訟風險，爭取最大合法權益。
                 </p>
             </div>
 
-            <!-- 服務項目 4 (可自行擴充) -->
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center mb-6 text-2xl">
-                    🤝
+            <!-- 服務項目 4 -->
+            <div class="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                <div class="w-14 h-14 bg-gray-50 flex items-center justify-center rounded-full mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300 text-primary">
+                    <i data-lucide="briefcase" class="w-7 h-7"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">常年法律顧問</h3>
-                <p class="text-gray-600 leading-relaxed mb-4">
-                    為企業與個人提供即時的法律諮詢、合約審閱與撰寫。事前防範法律風險，做您事業與生活上最堅實的後盾。
+                <h3 class="text-xl font-serif-tc font-bold text-primary mb-3">常年法律顧問</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    為企業與個人提供即時的法律諮詢、合約審閱與撰寫、存證信函代發。建立企業法律防火牆，事前防範風險，做您事業上最堅實的後盾。
                 </p>
             </div>
 
         </div>
 
         <!-- 返回首頁按鈕 -->
-        <div class="text-center border-t border-gray-200 pt-10">
-            <a href="index.html" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-900 hover:bg-blue-800 transition-colors shadow-sm">
-                ← 返回首頁，線上預約諮詢
+        <div class="text-center pt-8">
+            <a href="index.html#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-gray-800 text-white font-medium rounded-sm transition-colors shadow-lg">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+                立即預約諮詢
             </a>
         </div>
 
     </main>
 
-    <!-- 網站頁尾 -->
-    <footer class="bg-gray-900 text-white py-8 mt-auto">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
-            <p>&copy; 2026 德勝國際法律事務所. All rights reserved.</p>
+    <!-- Footer (與首頁一致) -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-4">
+                    <!-- Footer 的小 Logo 保持純文字即可 -->
+                    <span class="font-serif-tc font-bold text-xl text-gray-300 tracking-widest">德勝國際法律事務所</span>
+                </div>
+                <div class="text-sm text-center md:text-right">
+                    <p>&copy; 2026 德勝國際法律事務所 版權所有.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Initialize Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
