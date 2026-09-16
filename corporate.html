@@ -32,25 +32,47 @@
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
 
-    <!-- 導覽列 (與首頁一致) -->
-    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-24">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center gap-4">
-                        <img src="logo.png" alt="德勝國際法律事務所 Logo" class="h-16 w-auto object-contain">                        
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-accent font-medium transition-colors">首頁</a>
-                    <a href="services.html" class="text-accent font-medium border-b-2 border-accent pb-1">專業領域</a>
-                    <a href="index.html#contact" class="bg-primary hover:bg-gray-800 text-white px-6 py-2 rounded-sm font-medium transition-colors duration-300 shadow-md">
-                        線上預約諮詢
-                    </a>
-                </div>
+   <!-- 導覽列 (Navbar) - 與首頁完全同步 -->
+<nav class="bg-white shadow-sm fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-24 md:h-28">
+            
+            <!-- 左側：Logo 圖片 (與首頁相同大小) -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="logo.png" alt="德勝國際法律事務所" class="h-16 md:h-20 w-auto object-contain">
+                </a>
             </div>
+
+            <!-- 右側：電腦版選單 (與首頁完全一致的樣式與文字) -->
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="index.html#about" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">關於我們</a>
+                <a href="index.html#services" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">專業領域</a>
+                <a href="index.html#team" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">律師團隊</a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">聯絡我們</a>
+                <!-- 預約諮詢按鈕：統一改為首頁的亮金色（bg-accent） -->
+                <a href="https://forms.gle/6vejLw9F3kpizfW69" target="_blank" rel="noopener noreferrer" class="bg-accent text-white px-6 py-2.5 rounded-sm hover:bg-yellow-600 transition-colors font-bold text-lg shadow-sm">預約諮詢</a>
+            </div>
+
+            <!-- 右側最邊緣：手機版漢堡選單按鈕 -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+            
         </div>
-    </nav>
+    </div>
+
+    <!-- 手機版下拉選單 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-lg">
+        <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">關於我們</a>
+        <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">專業領域</a>
+        <a href="index.html#team" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">律師團隊</a>
+        <a href="index.html#contact" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">聯絡我們</a>
+        <a href="https://forms.gle/6vejLw9F3kpizfW69" target="_blank" rel="noopener noreferrer" class="block text-center bg-accent text-white px-4 py-2 rounded-sm hover:bg-yellow-600 transition-colors font-medium mt-4">預約諮詢</a>
+    </div>
+</nav>
 
     <!-- 主要內容區塊 -->
     <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-20 w-full">
