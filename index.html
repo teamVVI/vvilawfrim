@@ -58,48 +58,49 @@
 <body class="bg-light text-gray-800 antialiased">
 
 <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- 這裡把原本的 h-20 改成 h-24，讓導覽列變高一點 -->
-            <div class="flex justify-between h-24">
-                
-<!-- 網站 Logo 圖片 -->
-<a href="#" class="flex items-center">
-    <!-- h-12 到 h-16 可以控制 Logo 的高度，w-auto 會讓寬度自動等比例縮放 -->
-    <img src="logo.png" alt="德勝國際法律事務所 V.V. LAW" class="h-12 md:h-16 w-auto object-contain">
-</a>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-accent font-medium transition-colors">關於我們</a>
-                    <a href="#services" class="text-gray-600 hover:text-accent font-medium transition-colors">專業領域</a>
-                    <a href="#team" class="text-gray-600 hover:text-accent font-medium transition-colors">律師團隊</a>
-                    <a href="#contact" class="text-gray-600 hover:text-accent font-medium transition-colors">聯絡我們</a>
-                    <a href="https://forms.gle/pCpuuqUkbCTGstx59" target="_blank" rel="noopener noreferrer" class="bg-accent text-white px-6 py-2 rounded-sm hover:bg-yellow-600 transition-colors font-medium">預約諮詢</a>
-                    </a>
-                </div>
+<!-- 導覽列 (Navbar) -->
+<nav class="bg-white shadow-sm fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 關鍵排版設定：flex 讓元素並排，justify-between 讓它們分居左右 -->
+        <div class="flex justify-between items-center h-20 md:h-24">
+            
+            <!-- 左側：Logo 圖片 -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="#" class="flex items-center">
+                    <img src="logo.jpg" alt="德勝國際法律事務所" class="h-12 md:h-16 w-auto object-contain">
+                </a>
+            </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
-                    </button>
-                </div>
+            <!-- 右側：電腦版選單 -->
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors">關於我們</a>
+                <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors">專業領域</a>
+                <a href="#team" class="text-gray-700 hover:text-primary font-medium transition-colors">律師團隊</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition-colors">聯絡我們</a>
+                <!-- 💡 記得把這裡的 href 換回您的 Google 表單網址 -->
+                <a href="https://forms.gle/DE33pvuZHRfMTTAC6" target="_blank" rel="noopener noreferrer" class="bg-accent text-white px-6 py-2 rounded-sm hover:bg-yellow-600 transition-colors font-medium">預約諮詢</a>
             </div>
-        </div>
-        
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="block px-3 py-2 text-gray-600 font-medium">關於我們</a>
-                <a href="#services" class="block px-3 py-2 text-gray-600 font-medium">專業領域</a>
-                <a href="#team" class="block px-3 py-2 text-gray-600 font-medium">律師團隊</a>
-                <a href="#contact" class="block px-3 py-2 text-gray-600 font-medium">聯絡我們</a>
-                <a href="https://forms.gle/pCpuuqUkbCTGstx59" class="block px-3 py-2 text-gray-600 font-medium">預約諮詢</a>
+
+            <!-- 右側最邊緣：手機版漢堡選單按鈕 (在電腦版會自動隱藏) -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
             </div>
+            
         </div>
-    </nav>
+    </div>
+
+    <!-- 手機版下拉選單 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-lg">
+        <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">關於我們</a>
+        <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">專業領域</a>
+        <a href="#team" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">律師團隊</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">聯絡我們</a>
+        <!-- 💡 記得把這裡的 href 換回您的 Google 表單網址 -->
+        <a href="https://forms.gle/DE33pvuZHRfMTTAC6" target="_blank" rel="noopener noreferrer" class="block text-center bg-accent text-white px-4 py-2 rounded-sm hover:bg-yellow-600 transition-colors font-medium mt-4">預約諮詢</a>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="hero-bg h-screen flex items-center mt-10 md:mt-0">
