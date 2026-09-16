@@ -442,11 +442,16 @@
             });
         }
 
-        // 讓網頁重新整理時，強制回到最上方
+<!-- 強制網頁重新整理時回到最上方 -->
+    <script>
+        // 關閉瀏覽器的自動記憶捲動位置功能
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
-        window.scrollTo(0, 0);
+        // 強制回到座標 (0, 0) 也就是最頂端
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
     </script>
 </body>
 </html>
