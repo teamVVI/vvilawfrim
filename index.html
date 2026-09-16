@@ -399,10 +399,18 @@
         });
     }
 
-    // 💡 聰明的置頂機制：只有在「手動按下重新整理（Reload）」時才強制回頂端，點擊分頁連結時絕對不干擾！
-    if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-        window.scrollTo(0, 0);
+    // 💡 關閉瀏覽器的預設捲動記憶
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
     }
+
+    // 💡 透過微小時間差（50毫秒），確保在瀏覽器記憶恢復後「強制蓋過去」，讓網頁完美回到最頂端
+    window.addEventListener('pageshow', function(event) {
+        // 判斷是否為重新整理或返回
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 50);
+    });
 </script>
 </body>
 </html>
