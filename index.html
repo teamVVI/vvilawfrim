@@ -408,6 +408,11 @@
             menu.classList.toggle('hidden');
         });
     }
+
+    // 💡 聰明的置頂機制：只有在「手動按下重新整理（Reload）」時才強制回頂端，點擊分頁連結時絕對不干擾！
+    if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+        window.scrollTo(0, 0);
+    }
 </script>
 </body>
 </html>
