@@ -103,7 +103,7 @@
 </nav>
 
     <!-- Hero Section -->
-    <section class="h-screen flex items-center mt-10 md:mt-0" style="background-image: linear-gradient(rgba(30, 41, 59, 0.3), rgba(30, 41, 59, 0.5)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=1920&auto=format&fit=crop'); background-size: cover; background-position: center;">
+    <section class="h-screen flex items-center mt-10 md:mt-0" style="background-image: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.95)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop'); background-size: cover; background-position: center;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
             <div class="max-w-3xl">
                 <p class="text-accent font-medium tracking-widest uppercase mb-2">VVI Law Firm</p>
@@ -442,16 +442,11 @@
             });
         }
 
-<!-- 強制網頁重新整理時回到最上方 -->
+<!-- 防止手機重新整理時亂跳的設定 (不干擾小圖示) -->
     <script>
-        // 關閉瀏覽器的自動記憶捲動位置功能
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
-        // 強制回到座標 (0, 0) 也就是最頂端
-        window.onload = function() {
-            window.scrollTo(0, 0);
-        };
     </script>
 </body>
 </html>
