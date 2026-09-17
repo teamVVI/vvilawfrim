@@ -407,9 +407,14 @@
         history.scrollRestoration = 'manual';
     }
 
-    // 💡 透過微小時間差（50毫秒），確保在瀏覽器記憶恢復後「強制蓋過去」，讓網頁完美回到最頂端
+    // 💡 升級版置頂腳本：會先檢查是不是要跳到特定區塊
     window.addEventListener('pageshow', function(event) {
-        // 判斷是否為重新整理或返回
+        // 【關鍵修正】：如果網址裡面有井字號 (例如 #team, #services)，就「不要」強制置頂，讓它自然跳轉！
+        if (window.location.hash) {
+            return; 
+        }
+        
+        // 如果是純粹的首頁 (沒有井字號)，才執行微小時間差的置頂
         setTimeout(function() {
             window.scrollTo(0, 0);
         }, 50);
