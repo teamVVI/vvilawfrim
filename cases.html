@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成功案例｜德勝國際法律事務所</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b',
+                        accent: '#d4af37',
+                        accentHover: '#b5952f',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'serif'],
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, h4, h5, .font-serif-tc { font-family: 'Noto Serif TC', serif; }
+    </style>
+</head>
+<body class="bg-light text-gray-800 antialiased flex flex-col min-h-screen">
+
+<!-- 導覽列 (與首頁完美同步) -->
+<nav class="bg-white shadow-sm fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-24 md:h-28">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="logo.png" alt="德勝國際法律事務所" class="h-16 md:h-20 w-auto object-contain">
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="index.html#about" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">關於我們</a>
+                <a href="index.html#services" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">專業領域</a>
+                <a href="index.html#team" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">律師團隊</a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">聯絡我們</a>
+                <a href="cases.html" class="text-accent font-medium transition-colors text-lg border-b-2 border-accent">成功案例</a>
+                <a href="articles.html" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">法律知識</a>
+                <a href="https://forms.gle/6vejLw9F3kpizfW69" target="_blank" rel="noopener noreferrer" class="bg-accent text-white px-6 py-2.5 rounded-sm hover:bg-yellow-600 transition-colors font-bold text-lg shadow-sm">預約諮詢</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- 手機版下拉選單 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-lg">
+        <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">關於我們</a>
+        <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">專業領域</a>
+        <a href="index.html#team" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">律師團隊</a>
+        <a href="index.html#contact" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">聯絡我們</a>
+        <a href="cases.html" class="block px-3 py-2 text-accent bg-gray-50 rounded-md font-medium">成功案例</a>
+        <a href="articles.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">法律知識</a>
+        <a href="https://forms.gle/6vejLw9F3kpizfW69" target="_blank" rel="noopener noreferrer" class="block text-center bg-accent text-white px-4 py-2 rounded-sm hover:bg-yellow-600 transition-colors font-medium mt-4">預約諮詢</a>
+    </div>
+</nav>
+
+<!-- 頁面標題區塊 -->
+<header class="bg-primary pt-36 pb-20 mt-24 md:mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-serif-tc font-bold text-white mb-4">成功案例</h1>
+        <div class="w-16 h-1 bg-accent mx-auto mb-6"></div>
+        <p class="text-gray-300 text-lg max-w-2xl mx-auto">以專業法學素養與豐富實務經驗，為客戶爭取最大合法權益。以下為本所近期精選成功案件。</p>
+    </div>
+</header>
+
+<!-- 案例列表區塊 -->
+<section class="py-16 bg-light flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- 案例 1 -->
+            <div class="bg-white p-8 rounded-sm shadow-md border-l-4 border-accent">
+                <span class="inline-block px-3 py-1 bg-gray-100 text-primary text-sm font-bold rounded-sm mb-4">民事訴訟</span>
+                <h3 class="text-xl font-serif-tc font-bold text-gray-900 mb-3">成功為企業客戶爭取千萬工程款勝訴</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    本件為營建工程款爭議，對方以工程瑕疵為由拒絕給付尾款。本所律師團隊透過精準的證據保全與專業鑑定策略，成功說服法官，為當事人討回全額千萬工程款。
+                </p>
+            </div>
+
+            <!-- 案例 2 -->
+            <div class="bg-white p-8 rounded-sm shadow-md border-l-4 border-accent">
+                <span class="inline-block px-3 py-1 bg-gray-100 text-primary text-sm font-bold rounded-sm mb-4">刑事辯護</span>
+                <h3 class="text-xl font-serif-tc font-bold text-gray-900 mb-3">協助當事人於詐欺案件獲不起訴處分</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    當事人因遭詐騙集團利用帳戶而捲入幫助詐欺案件。律師於偵查階段協助還原金流與對話紀錄，成功證明當事人無主觀犯意，獲檢察官不起訴處分。
+                </p>
+            </div>
+            
+            <!-- 您可以在這裡複製上面的卡片，繼續增加更多案例 -->
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <span class="font-serif-tc font-bold text-xl text-gray-300 tracking-widest">德勝國際法律事務所</span>
+            </div>
+            <div class="text-sm text-center md:text-right">
+                <p>&copy; 2026 德勝國際法律事務所 版權所有.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+</script>
+</body>
+</html>
