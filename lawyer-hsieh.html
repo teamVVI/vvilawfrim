@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謝佳容 主持律師｜德勝國際法律事務所</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#1e293b', accent: '#d4af37', light: '#f8fafc', } } } }
+    </script>
+    <style>body { font-family: 'Noto Sans TC', sans-serif; } h1, h2, h3, .font-serif-tc { font-family: 'Noto Serif TC', serif; }</style>
+</head>
+<body class="bg-light text-gray-800 antialiased flex flex-col min-h-screen">
+
+<!-- 導覽列 (子分頁專用版) -->
+<nav class="bg-white shadow-sm fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-24 md:h-28">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="index.html" class="flex items-center"><img src="logo.png" alt="德勝國際法律事務所" class="h-16 md:h-20 w-auto object-contain"></a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="index.html#about" class="text-gray-700 hover:text-primary font-medium text-lg">關於我們</a>
+                <a href="index.html#services" class="text-gray-700 hover:text-primary font-medium text-lg">專業領域</a>
+                <!-- 💡 為了標示當前在看團隊成員，我們把律師團隊的字體高亮為金色 -->
+                <a href="index.html#team" class="text-accent font-medium text-lg border-b-2 border-accent">律師團隊</a>
+                <a href="cases.html" class="text-gray-700 hover:text-primary font-medium text-lg">成功案例</a>
+                <a href="articles.html" class="text-gray-700 hover:text-primary font-medium text-lg">法律知識</a>
+                <a href="index.html#contact" class="text-gray-700 hover:text-primary font-medium text-lg">聯絡我們</a>
+                <a href="https://forms.gle/6vejLw9F3kpizfW69" target="_blank" class="bg-accent text-white px-6 py-2.5 rounded-sm hover:bg-yellow-600 font-bold text-lg shadow-sm">預約諮詢</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none"><i data-lucide="menu" class="w-8 h-8"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- 手機版下拉選單 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-lg">
+        <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">關於我們</a>
+        <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">專業領域</a>
+        <a href="index.html#team" class="block px-3 py-2 text-accent bg-gray-50 rounded-md font-medium">律師團隊</a>
+        <a href="cases.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">成功案例</a>
+        <a href="articles.html" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">法律知識</a>
+        <a href="index.html#contact" class="block px-3 py-2 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md font-medium">聯絡我們</a>
+        <a href="https://forms.gle/6vejLw9F3kpizfW69" target="_blank" class="block text-center bg-accent text-white px-4 py-2 rounded-sm hover:bg-yellow-600 mt-4">預約諮詢</a>
+    </div>
+</nav>
+
+<!-- 律師個人資料區塊 -->
+<main class="flex-grow pt-32 pb-20 md:pt-40 md:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    
+    <!-- 麵包屑導航 -->
+    <div class="flex items-center text-sm text-gray-500 mb-8">
+        <a href="index.html" class="hover:text-accent">首頁</a>
+        <i data-lucide="chevron-right" class="w-4 h-4 mx-2"></i>
+        <a href="index.html#team" class="hover:text-accent">律師團隊</a>
+        <i data-lucide="chevron-right" class="w-4 h-4 mx-2"></i>
+        <span class="text-gray-700">謝佳容 律師</span>
+    </div>
+
+    <!-- 主要內容區：左圖右文排版 -->
+    <div class="bg-white rounded-sm shadow-md border-t-4 border-accent flex flex-col md:flex-row overflow-hidden">
+        
+        <!-- 左側：照片與聯絡方式 -->
+        <div class="md:w-1/3 bg-gray-50 p-8 flex flex-col items-center text-center border-r border-gray-100">
+            <div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-sm">
+                <!-- 💡 請換成謝律師的照片檔名 -->
+                <img src="lawyer-hsieh.jpg" alt="謝佳容 律師" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-3xl font-serif-tc font-bold text-primary mb-2">謝佳容</h1>
+            <p class="text-accent font-bold text-lg tracking-widest mb-6">主持律師</p>
+            
+            <div class="w-full h-px bg-gray-200 mb-6"></div>
+            
+            <!-- 聯絡小資訊 -->
+            <div class="text-gray-600 text-sm space-y-3 w-full text-left pl-4">
+                <p class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-accent"></i> team@vvilawfirm.com</p>
+                <p class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-accent"></i> (04) 2224-5686</p>
+            </div>
+            
+            <a href="https://forms.gle/6vejLw9F3kpizfW69" target="_blank" class="mt-8 w-full bg-primary hover:bg-gray-800 text-white py-3 rounded-sm font-bold transition-colors flex items-center justify-center gap-2">
+                <i data-lucide="calendar-check" class="w-5 h-5"></i> 指定預約諮詢
+            </a>
+        </div>
+
+        <!-- 右側：學經歷與專長介紹 -->
+        <div class="md:w-2/3 p-8 md:p-12">
+            <h3 class="text-2xl font-serif-tc font-bold text-primary mb-6 flex items-center gap-2">
+                <i data-lucide="gavel" class="w-6 h-6 text-accent"></i> 專業簡介
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-10 text-lg">
+                謝佳容律師具備多年豐富的行政機關經驗，在面對棘手的工程案件及稅務案件時，善於運用細膩的邏輯分析案情，為當事人擬定最有利的訴訟策略，致力於將當事人的權益最大化。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- 專長領域 -->
+                <div>
+                    <h4 class="text-lg font-bold text-primary mb-4 border-l-4 border-accent pl-3">專長領域</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> 民事訴訟、刑事訴訟、家事案件</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> 企業法律顧問與合約審閱</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> 工程履約爭議</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-accent"></i> 稅務爭議</li>
+                    </ul>
+                </div>
+                
+                <!-- 學歷與經歷 -->
+                <div>
+                    <h4 class="text-lg font-bold text-primary mb-4 border-l-4 border-accent pl-3">學經歷</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div> 德勝國際法律事務所 主持律師</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div> 國立政治大學 財政學系 學士</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div> 國立中興大學 法律學系 碩士</li> 
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div> 「你的律師朋友」Podcast節目製作主持 </li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div> 中華民國律師高考及格</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div> 記帳士、不動產經紀人</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div> 臺中市新建工程處、臺中市政府建設局</li>
+                        <li class="flex items-start gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div> 臺中市政府地方稅務局、臺中市政府財政局</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 返回按鈕 -->
+    <div class="mt-12 text-center border-t border-gray-200 pt-8">
+        <a href="index.html#team" class="text-gray-500 hover:text-primary font-medium flex items-center justify-center gap-2 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> 返回律師團隊
+        </a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left text-sm">
+        <p>&copy; 2026 德勝國際法律事務所 版權所有.</p>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => { link.addEventListener('click', () => { menu.classList.add('hidden'); }); });
+    }
+</script>
+</body>
+</html>
