@@ -396,25 +396,35 @@
     // 手機版選單開關
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
+    
     if (btn && menu) {
+        // 1. 點擊漢堡按鈕開關選單
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+        // 💡 2. 新增：點擊選單內的任何連結後，自動收起選單
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
     }
 
-    // 💡 關閉瀏覽器的預設捲動記憶
+    // 關閉瀏覽器的預設捲動記憶
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
     }
 
-    // 💡 升級版置頂腳本：會先檢查是不是要跳到特定區塊
+    // 升級版置頂腳本：會先檢查是不是要跳到特定區塊
     window.addEventListener('pageshow', function(event) {
-        // 【關鍵修正】：如果網址裡面有井字號 (例如 #team, #services)，就「不要」強制置頂，讓它自然跳轉！
+        // 如果網址裡面有井字號 (例如 #team, #services)，就不強制置頂
         if (window.location.hash) {
             return; 
         }
         
-        // 如果是純粹的首頁 (沒有井字號)，才執行微小時間差的置頂
+        // 如果是純粹的首頁，才執行微小時間差的置頂
         setTimeout(function() {
             window.scrollTo(0, 0);
         }, 50);
