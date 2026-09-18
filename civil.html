@@ -121,6 +121,16 @@
             <p>&copy; 2026 德勝國際法律事務所 版權所有.</p>
         </div>
     </footer>
-    <script>lucide.createIcons();</script>
+
+    <script>
+    lucide.createIcons();
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+</script>
 </body>
 </html>
