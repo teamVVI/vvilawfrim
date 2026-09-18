@@ -408,28 +408,32 @@
         });
     }
 
-    // 1. 關閉瀏覽器的預設捲動記憶
+    // 關閉瀏覽器的預設捲動記憶
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
     }
 
-    // 2. 完美判斷：只在「真正的重新整理」時置頂，點擊分頁絕不干擾！
+    // 最終完美版判斷邏輯
     window.addEventListener('pageshow', function(event) {
-        // 如果網址有井字號 (#team, #services)，絕對不干擾
-        if (window.location.hash) {
-            return; 
-        }
         
-        // 利用瀏覽器內建效能 API，偵測這是不是一個「重新整理 (reload)」的動作
+        // 判斷這個動作是不是「重新整理」
         const navEntries = window.performance && window.performance.getEntriesByType("navigation");
         const isReload = (navEntries && navEntries.length > 0 && navEntries[0].type === "reload") || 
                          (window.performance && window.performance.navigation.type === 1);
 
-        // 只有在真的是重新整理時，才瞬間置頂
         if (isReload) {
+            // 【關鍵修正 1】：如果是重新整理，發現網址有 #，我們就悄悄把它擦掉，不留痕跡
+            if (window.location.hash) {
+                history.replaceState(null, null, window.location.pathname + window.location.search);
+            }
+            // 【關鍵修正 2】：不管是哪裡重新整理，一律強制瞬間拉回最上面
             setTimeout(function() {
                 window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
             }, 10);
+        } else {
+            // 如果【不是】重新整理 (代表是從其他分頁點連結過來的)
+            // 就甚麼都不做，讓瀏覽器乖乖自動滑到該去的區塊 (例如律師團隊)
+            return;
         }
     });
 </script>
