@@ -393,17 +393,13 @@
     // 初始化 Lucide 圖示
     lucide.createIcons();
 
-    // 手機版選單開關
+    // 手機版選單開關與自動收合
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
-    
     if (btn && menu) {
-        // 1. 點擊漢堡按鈕開關選單
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
-
-        // 💡 2. 新增：點擊選單內的任何連結後，自動收起選單
         const menuLinks = menu.querySelectorAll('a');
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -412,22 +408,29 @@
         });
     }
 
-    // 關閉瀏覽器的預設捲動記憶
+    // 1. 關閉瀏覽器的預設捲動記憶
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
     }
 
-    // 升級版置頂腳本：會先檢查是不是要跳到特定區塊
+    // 2. 完美判斷：只在「真正的重新整理」時置頂，點擊分頁絕不干擾！
     window.addEventListener('pageshow', function(event) {
-        // 如果網址裡面有井字號 (例如 #team, #services)，就不強制置頂
+        // 如果網址有井字號 (#team, #services)，絕對不干擾
         if (window.location.hash) {
             return; 
         }
         
-        // 如果是純粹的首頁，才執行微小時間差的置頂
-        setTimeout(function() {
-            window.scrollTo(0, 0);
-        }, 50);
+        // 利用瀏覽器內建效能 API，偵測這是不是一個「重新整理 (reload)」的動作
+        const navEntries = window.performance && window.performance.getEntriesByType("navigation");
+        const isReload = (navEntries && navEntries.length > 0 && navEntries[0].type === "reload") || 
+                         (window.performance && window.performance.navigation.type === 1);
+
+        // 只有在真的是重新整理時，才瞬間置頂
+        if (isReload) {
+            setTimeout(function() {
+                window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            }, 10);
+        }
     });
 </script>
 </body>
